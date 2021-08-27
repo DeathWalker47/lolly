@@ -1,0 +1,32 @@
+html,
+body{
+  height: 100%;
+}
+
+body{
+  font-size: 16px;
+  line-height: 27px;
+  color: $default;
+  @extend %lato-700;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper{
+  overflow: hidden;
+}
+
+.container{
+  max-width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title{
+  font-size: 54px;
+  line-height: 65px;
+  text-transform: capitalize;
+  color: $title;
+  @extend %play-400;
+  text-align: center;
+}

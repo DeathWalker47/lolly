@@ -1,0 +1,49 @@
+
+$accent: #F75283;
+$default: #868C96;
+$title: #121218;
+$white: #fff;
+
+
+%btn{
+  padding: 18px 30px;
+  text-transform: uppercase;
+  color: $white;
+  font-size: 14px;
+  line-height: 24px;
+  @extend %lato-700;
+  display: inline-block;
+  background-color: $title;
+}
+
+%lato-400{
+  font-family: 'Lato' , sans-serif;
+  font-weight: 400;
+}
+
+%lato-700{
+  font-family: 'Lato' , sans-serif;
+  font-weight: 700;
+}
+
+%ballet{
+  font-family: 'Ballet', cursive;
+  font-weight: 400;
+}
+
+%play-400{
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+}
+
+%play-700{
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+@function max($numbers...) {
+ @return m#{a}x(#{$numbers});
+}
+@function mix($numbers...) {
+ @return m#{i}n(#{$numbers});
+}

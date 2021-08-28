@@ -175,7 +175,139 @@
   }
 }
 
-
+.bests-sellers{
+  padding: 160px 0;
+  &__title{
+    margin-bottom: 50px;
+  }
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    width: 255px;
+    margin-right: 30px;
+    position: relative;
+    &:last-child{
+      margin-right: 0;
+    }
+    &--sale .bests-sellers__item-box::after,
+    &--new .bests-sellers__item-box::after,
+    &--hit .bests-sellers__item-box::before{
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 50px;
+         height: 22px;
+         padding: 3px 0;
+         text-align: center;
+         font-size: 12px;
+         line-height: 130%;
+         text-transform: uppercase;
+         color: $white;
+         z-index: 1;
+       }
+    &--new{
+     .bests-sellers__item-box{
+       &::after{
+         content: 'NEW';
+         background-color: $new;
+       }
+     } 
+    }
+    &--hit{
+     .bests-sellers__item-box{
+       &::before{
+         content: 'HIT';
+         background-color: $hit;
+         z-index: 1;
+       }
+     }   
+    }
+    &--sale{
+     .bests-sellers__item-box{
+       &::after{
+         content: 'sale';
+         background-color: $sale
+       }
+     }   
+    }
+    &--hit.bests-sellers__item--new,
+    &--sale.bests-sellers__item--hit{
+      .bests-sellers__item-box::after{
+        top: 22px;
+      }
+    }
+  }
+  &__item-like{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 1;
+    &--active{
+      svg{
+        path{
+          fill: $accent
+        }
+      }
+    }
+  }
+  &__item-box{
+    width: 255px;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 16px;
+    position: relative;
+  }
+  &__item-img{
+    width: 255px;
+    height: 350px;
+    object-fit: cover;
+  }
+  &__item-rate{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    .star{
+      padding-right: 10px;
+    }
+  }
+  .star{
+    svg{
+      stroke-width: 15;
+   }
+  }
+  &__item-num{
+    font-size: 14px;
+    line-height: 140%;
+  }
+  &__item-title{
+    font-size: 22px;
+    line-height: 130%;
+    margin-bottom: 5px;
+    text-align: left;
+  }
+  &__item-text{
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 10px;
+    min-height: 40px;
+  }
+  &__item-sum{
+    font-size: 18px;
+    line-height: 160%;
+    color: $title;
+    &--sale{
+      text-decoration: line-through;
+      color: $default;
+      padding-right: 6px;
+    }
+  }
+}
 
 
 

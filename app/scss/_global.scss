@@ -7,12 +7,13 @@ body{
   font-size: 16px;
   line-height: 27px;
   color: $default;
-  @extend %lato-700;
-  display: flex;
-  flex-direction: column;
+  @extend %lato-400;
+  position: relative;
 }
 
 .wrapper{
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -29,4 +30,14 @@ body{
   color: $title;
   @extend %play-400;
   text-align: center;
+}
+
+.subtitle{
+  color: $accent;
+  font-size: 40px;
+  line-height: 100%;
+  display: block;
+  text-align: center;
+  @extend %ballet;
+  margin-bottom: -10px;
 }

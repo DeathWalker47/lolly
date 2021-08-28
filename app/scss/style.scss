@@ -40,6 +40,9 @@
     line-height: 24px;
     color: $title;
     text-transform: uppercase;
+    &--active{
+      color: $accent;
+    }
   }
 }
 
@@ -201,7 +204,9 @@
          width: 50px;
          height: 22px;
          padding: 3px 0;
-         text-align: center;
+         display: flex;
+         justify-content: center;
+         align-items: center;
          font-size: 12px;
          line-height: 130%;
          text-transform: uppercase;
@@ -263,11 +268,18 @@
     display: block;
     margin-bottom: 16px;
     position: relative;
+    overflow: hidden;
+    &:hover{
+      .bests-sellers__item-img{
+        transform: scale(1.13);
+      }
+    }
   }
   &__item-img{
     width: 255px;
     height: 350px;
     object-fit: cover;
+    transition: all .4s linear;
   }
   &__item-rate{
     display: flex;
@@ -605,6 +617,10 @@
 
 .blog{
   padding-bottom: 160px;
+  background-image: url('../images/decor/decor-blog-min.svg');
+  background-repeat: no-repeat;
+  background-position: 100% 265%;
+  background-size: auto;
   &__subtitle{
     margin-top: 0;
   }
@@ -626,11 +642,18 @@
     display: block;
     margin-bottom: 25px;
     position: relative;
+    overflow: hidden;
+    &:hover{
+      .blog__img{
+        transform: scale(1.13);
+      }
+    }
   }
   &__img{
     width: 350px;
     height: 450px;
     object-fit: cover;
+    transition: all .4s linear;
   }
   &__img-date{
     position: absolute;
@@ -718,6 +741,21 @@
     &--newsletter{
       grid-column: span 2;
       background-color: $hit;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      &::before{
+        content: 'Subscribe';
+        position: absolute;
+        bottom: -90px;
+        left: -115px;
+        font-size: 280px;
+        line-height: 100%;
+        color: #FFFFFF;
+        opacity: 0.26;
+        @extend %ballet;
+        z-index: -1;
+      }
     }
   }
   &__img{
@@ -755,6 +793,100 @@
     @extend %btn;
   }
 }
+
+.footer{
+  background-color: $title;
+  background-image: url('../images/footer-overley.png');
+  background-repeat: no-repeat;
+  background-position: 35% 70%;
+  background-size: auto;
+  &__inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 110px 0 66px;
+    border-bottom: 1px solid rgba($color: $white, $alpha: .2)
+  }
+  &__contact-title{
+    text-align: left;  
+    font-size: 22px;
+    line-height: 130%;  
+    color: $white;
+    margin-bottom: 30px;
+  }
+  &__link{
+    color: $white;
+    padding-left: 35px;
+    position: relative;
+    display: block;
+    &::before,
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 25px;
+      height: 25px;
+    }
+    
+    &--tel{
+      margin-bottom: 20px;
+      &::before{
+        background-image: url('../images/icon/phone.svg');
+      }
+    }
+    &--email{
+      margin-bottom: 53px;
+      &::after{
+        background-image: url('../images/icon/message.svg');
+      }
+    }
+  }
+  &__social{
+    display: flex;
+  }
+  &__social-item{
+    margin-right: 10px;
+    transition: all .3s linear;
+    &:hover{
+      opacity: .5;
+    }
+  }
+  &__title{
+    font-size: 22px;
+    line-height: 130%;
+    text-align: left;
+    color: $white;
+    margin-bottom: 30px;
+  }
+  &__list-item{
+    margin-bottom: 7px;
+    transition: all .3s linear;
+    &:hover{
+      color: $white;
+    }
+  }
+  &__bottom{
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__copy{
+    font-size: 14px;
+    line-height: 140%;
+  }
+  &__cart-list{
+    display: flex;
+  }
+  &__cart-item{
+    margin-left: 10px;
+  }
+}
+
+
+
+
 
 
 

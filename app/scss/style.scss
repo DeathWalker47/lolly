@@ -148,32 +148,32 @@
     padding-right: 10px;
    }
   }
+  .swiper-pagination{
+    top: 50%;
+    text-align: right;
+    font-size: 24px;
+    line-height: 100%;
+    color: $default;
+    width: 205px;
+    height: 50px;
+    transform: rotate(-90deg);
+    .swiper-pagination-current{
+      font-size: 60px;
+      color: $title;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      width: 100px;
+      height: 1px;
+      background-color: $title;
+      top: 35%;
+      left: 0;
+    }
+  }
 }
 
 
-.swiper-pagination{
-  top: 50%;
-  text-align: right;
-  font-size: 24px;
-  line-height: 100%;
-  color: $default;
-  width: 205px;
-  height: 50px;
-  transform: rotate(-90deg);
-  .swiper-pagination-current{
-    font-size: 60px;
-    color: $title;
-  }
-  &::before{
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 1px;
-    background-color: $title;
-    top: 35%;
-    left: 0;
-  }
-}
 
 .bests-sellers{
   padding: 160px 0;
@@ -474,11 +474,11 @@
       font-size: 34px;
       line-height: 130%;
     }
-  }
+}
 
-  .new-arrivals{
+.new-arrivals{
     padding: 160px 0;
-    background: url('../images/decor/decor-face-min.svg') no-repeat 0% 100%/auto;
+    background: url('../images/decor/decor-face-min.svg') no-repeat 0% 98%/auto;
     &__wrapper{
       padding-top: 10px;
       overflow: hidden;
@@ -495,14 +495,113 @@
         content: '';
       }
     }
-  }
+}
 
-  .bests-swiper{
-    /* overflow-x: hidden; */
+.bests-swiper{
+  position: relative;
+}
+
+.reviews{
+  background: url('../images/three-bg.jpg') no-repeat 100%/center;
+  @supports (background-image: url('../images/three-bg.webp')){
+    background: url('../images/three-bg.webp') no-repeat 100%/cover;
+  }
+  height: 760px;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url('../images/decor/decor-three2-min.svg');
+    width: 550px;
+    height: 380px;
+  }
+  &__conteiner{
+    min-width: 0;
+  }
+  &__wrapper{
+    width: 640px;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+  &__inner{
+    display: flex;
+    align-items: center;
+  }
+  &__content{
+    min-width: 0;
+    padding: 160px 0;
+    width: 640px;
+    margin: 0 auto;
+    text-align: center;
     position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 14%;
+      right: 14%;
+      background-image: url('../images/decor/decor-three-min.svg');
+      width: 103px;
+      height: 80px;
+    }
+  }
+  &__subtitle{
+    margin-top: 0;
+  }
+  &__title{
+    margin-bottom: 50px;
+  }
+  &__text{
+    font-size: 18px;
+    line-height: 31px;
+    margin-bottom: 25px;
+  }
+  .star{
+    margin: 0 auto 25px;
+  }
+  &__name{
+    font-size: 18px;
+    line-height: 130%;
+    color: $title;
+    margin-bottom: 5px;
+  }
+  &__product{
+    font-size: 14px;
+    line-height: 140%;
+    margin-bottom: 50px;
+  }
+  &__img{
+    width: 835px;
+    height: 930px;
+    margin-top: -189px;
+    object-fit: contain;
   }
 
+  .swiper-pagination{
+    bottom: 22%;
+  }
+  .swiper-pagination-bullet{
+    width: 20px;
+    height: 5px;
+    background-color: $white;
+    margin: 0 10px;
+    opacity: 1;
+    border-radius: 0;
+  }
+  .swiper-pagination-bullet-active{
+    width: 30px;
+    background-color: #000;
+  }
+}
 
+.portners{
+  padding: 160px 50px;
+  &__inner{
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
 
 

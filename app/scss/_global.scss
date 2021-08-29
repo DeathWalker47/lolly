@@ -15,6 +15,11 @@ body{
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  min-height: 100%;
+}
+
+.main{
+  flex-grow: 1;
 }
 
 .container{
@@ -71,5 +76,33 @@ body{
   }
   &__link--active{
     color: $title;
+  }
+}
+
+.pagination{
+  display: flex;
+  justify-content: center;
+  &__list{
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    margin-right: 10px;
+    border: 1px solid $default;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__link{
+    color: $title;
+    min-width: 40px;
+    height: 40px;
+    padding: 7px 5px;
+    display: block;
+    text-align: center;
+    &--active{
+      color: $white;
+      background-color: $title;
+    }
   }
 }

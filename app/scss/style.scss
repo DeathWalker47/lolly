@@ -884,6 +884,98 @@
   }
 }
 
+.head{
+  background: url('../images/head-top.jpg') no-repeat 100%/cover; 
+  @supports (background-image: url('../images/head-top.webp')){
+    background: url('../images/head-top.webp') no-repeat 100%/cover;
+  }
+  position: relative;
+  &::before,
+  &::after{
+    content: '';
+    position: absolute;
+  }
+  &::before{
+    background-image: url('../images/decor/decor-face2-min.svg');
+    width: 350px;
+    height: 220px;
+    bottom: 0;
+    left: 85px;
+  }
+  &::after{
+    background-image: url('../images/decor/decor-shop2-min.svg');
+    bottom: 13px;
+    right: 0;
+    width: 290px;
+    height: 260px;
+  }
+  &__content{
+    padding: 195px 0 110px;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      top: 25%;
+      right: 25%;
+      width: 105px;
+      height: 80px;
+      background-image: url('../images/decor/decor-shop-min.svg');
+      background-repeat: no-repeat;
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      @extend %ballet;
+      color: $white;
+      font-size: 250px;
+      line-height: 170%;
+      opacity: .6;
+      bottom: -46%;
+      left: 25%;
+      z-index: -1;
+    }
+  }
+  &__title{
+    font-size: 60px;
+    line-height: 130%;
+    margin-bottom: 10px;
+  }
+  .head__content--about{
+    &::after{
+      content: 'About';
+    }
+  }
+}
+
+.about{
+  padding-top: 160px;
+  &__item{
+    display: flex;
+  }
+  &__content{
+    max-width: 555px;
+    padding: 50px 43px;
+    text-align: center;
+  }
+  &__item-img{
+    margin: 0 auto;
+    margin-bottom: 15px;
+  }
+  &__title{
+    font-size: 42px;
+    line-height: 130%;
+    margin-bottom: 15px;
+  }
+  &__img{
+    width: 555px;
+    height: 555px;
+    object-fit: cover;
+  }
+}
+
+
 
 
 

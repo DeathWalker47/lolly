@@ -41,3 +41,35 @@ body{
   @extend %ballet;
   margin-bottom: -10px;
 }
+
+.breadcrumbs{
+  &__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__item{
+    margin-right: 24px;
+    position: relative;
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: 11px;
+      right: -10px;
+      width: 4px;
+      height: 4px;
+      background-color: $hit;
+      border-radius: 50%;
+    }
+    &:last-child{
+      margin-right: 0;
+      &::before{
+        display: none;
+      }
+    }
+  }
+  &__link--active{
+    color: $title;
+  }
+}

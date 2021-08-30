@@ -6,6 +6,7 @@ $white: #fff;
 $new:#8B84A0;
 $hit:#DF949D;
 $sale:#A5C6B1;
+$gray:rgba($color: #D2DFE6, $alpha: .5);
 
 
 %btn{
@@ -49,6 +50,16 @@ $sale:#A5C6B1;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
 }
+
+%checkbox-hidden{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+
 
 @function max($numbers...) {
  @return m#{a}x(#{$numbers});

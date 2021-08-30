@@ -314,10 +314,23 @@
     font-size: 18px;
     line-height: 160%;
     color: $title;
+    display: flex;
+    justify-content: space-between;
     &--sale{
       text-decoration: line-through;
       color: $default;
       padding-right: 6px;
+    }
+  }
+  &__item-button{
+    @extend %btn;
+    background-color: transparent;
+    padding: 0;
+    color: $title;
+    opacity: 0;
+    overflow: hidden;
+    &:hover{
+      background-color: transparent;
     }
   }
 }
@@ -959,6 +972,11 @@
       content: 'Single post';
     }
   }
+  .head__content--shop{
+    &::after{
+      content: 'Shop';
+    }
+  }
 }
 
 .about{
@@ -1273,7 +1291,160 @@
   }
 }
 
+.shop{
+  padding: 160px 0;
+  background: url('../images/shop-bg.svg') no-repeat 0% 100%/auto;
+  &__inner{
+    display: flex;
+  }
+  &__filter{
+    width: 255px;
+    margin-right: 60px;
+  }
+  &__content{
+    width: 825px;
+    width: 100%;
+  }
+  &__filter-item{
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $gray;
+  }
+}
 
+.filter{
+  &__title{
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: capitalize;
+    color: $title;
+    margin-bottom: 15px;
+  }
+  &__search-form{
+    position: relative;
+    padding-bottom: 15px;
+  }
+  &__search-input{
+    width: 225px;
+    padding: 20px 45px 20px 25px;
+    border: 1px solid $gray;
+  }
+  &__search-btn{
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    position: absolute;
+    top: 24px;
+    right: 20px;
+  }
+  &__categories-form{
+    height: 160px;
+    overflow: auto;
+  }
+  &__categories-label,
+  &__gender-label{
+    padding-left: 25px;
+    margin-bottom: 5px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+  }
+  &__categories-input,
+  &__gender-input{
+    @extend %checkbox-hidden;
+    &:checked + .filter__categories-checkbox,
+    &:checked + .filter__gender-checkbox{
+      border: 1px solid $accent;
+      background-image: url('../images/icon/check.svg');
+      background-position: center;
+    }
+  }
+  &__categories-checkbox,
+  &__gender-checkbox{
+    width: 14px;
+    height: 15px;
+    background-color: #F6F8FC;
+    border: 1px solid $gray;
+    position: absolute;
+    margin-left: -25px;
+    margin-top: 6px;
+  }
+}
+
+.irs--flat .irs-line {
+  top: 4px;
+  height: 3px;
+  background-color: $gray;
+  border-radius: 0;
+}
+.irs--flat .irs-bar {
+  top: 4px;
+  height: 3px;
+  background-color: $accent;
+}
+.irs--flat .irs-handle {
+  top: 0;
+  width: 11px;
+  height: 11px;
+  background-color: $accent;
+  border-radius: 50%;
+}
+.irs--flat .irs-handle>i:first-child{
+  display: none;
+}
+.irs--flat .irs-min, .irs--flat .irs-max {
+  display: none;
+}
+.irs-from,
+.irs-to{
+  display: none;
+}
+
+
+
+.shop-content{
+  &__top{
+    margin-bottom: 30px;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+  }
+  &__form-select{
+    background-color: transparent;
+    border: none;
+    color: $default;
+  }
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    .bests-sellers__item-box,
+    .bests-sellers__item-title{
+      transition: all .2s linear;
+      border: 1px solid transparent;
+    }
+    .bests-sellers__item{
+      margin-bottom: 80px;
+      &:hover{
+        .bests-sellers__item-box{
+          border: 1px solid $accent;
+        }
+        .bests-sellers__item-title{
+          color: $accent;
+        }
+        .bests-sellers__item-button{
+          opacity: 1;
+          overflow: visible;
+        }
+      }
+      &:nth-child(3n){
+        margin-right: 0;
+      }
+    }
+  }
+}
 
 
 

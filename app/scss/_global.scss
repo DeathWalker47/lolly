@@ -1,6 +1,9 @@
 html,
 body{
   height: 100%;
+  ::-webkit-scrollbar { width: 4px; height: 4px;} //ширина и высота скролла
+  ::-webkit-scrollbar-track-piece { background-color: #D2DFE6;}//цвет полосы
+  ::-webkit-scrollbar-thumb { height: 50px; background-color: #121218; border-radius: 0;}/* ползунок скроллбара */
 }
 
 body{
@@ -61,7 +64,7 @@ body{
       content: '';
       position: absolute;
       bottom: 11px;
-      right: -10px;
+      right: -14px;
       width: 4px;
       height: 4px;
       background-color: $hit;

@@ -23,6 +23,50 @@ $(function () {
       $('.filter__price-to').text(data.to);
   },
   });
+
+  $('.product-tabs__link').on('click', function(e){
+    e.preventDefault();
+    $('.product-tabs__link').removeClass('product-tabs__link--active');
+    $(this).addClass('product-tabs__link--active');
+
+    $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
+    $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  });
+
+
+
+  $('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
+    $('.quantity').each(function() {
+    var spinner = $(this),
+      input = spinner.find('input[type="number"]'),
+      btnUp = spinner.find('.quantity-up'),
+      btnDown = spinner.find('.quantity-down'),
+      min = input.attr('min'),
+      max = input.attr('max');
+
+    btnUp.click(function() {
+      var oldValue = parseFloat(input.val());
+      if (oldValue >= max) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue + 1;
+      }
+      spinner.find("input").val(newVal);
+      spinner.find("input").trigger("change");
+    });
+
+    btnDown.click(function() {
+      var oldValue = parseFloat(input.val());
+      if (oldValue <= min) {
+        var newVal = oldValue;
+      } else {
+        var newVal = oldValue - 1;
+      }
+      spinner.find("input").val(newVal);
+      spinner.find("input").trigger("change");
+    });
+
+  });
  
 });
 
@@ -76,3 +120,26 @@ $(function () {
     clickable: true,
   },
  });
+
+ var smallSwiper = new Swiper('.product-slider__small',{
+  slidesPerView: 5,
+  speed: 1000,
+  slideToClickedSlide:true,
+ });
+
+ var bigSwiper = new Swiper('.big-swiper',{
+  speed: 1000,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
+  slidesPerView: 1,
+ 
+ });
+
+
+
+ smallSwiper.params.control = this.bigSwiper;
+ bigSwiper.params.control = this.smallSwiper;
+
+

@@ -125,6 +125,8 @@ $(function () {
   slidesPerView: 5,
   speed: 1000,
   slideToClickedSlide:true,
+  watchSlidesProgress: true,
+  freeMode: true,
  });
 
  var bigSwiper = new Swiper('.big-swiper',{
@@ -134,7 +136,9 @@ $(function () {
     crossFade: true
   },
   slidesPerView: 1,
- 
+  thumbs: {/* Связал два слайдера */
+    swiper: smallSwiper 
+  }
  });
 
 

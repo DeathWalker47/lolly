@@ -982,6 +982,11 @@
       content: 'Product';
     }
   }
+  .head__content--cart{
+    &::after{
+      content: 'Cart';
+    }
+  }
 }
 
 .about{
@@ -1793,7 +1798,217 @@ input[type=number]
   }
 }
 
+.cart{
+  padding: 160px 0;
+  background-image: url('../images/cart-bg.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 0% 98%;
+  &__content{
+    margin-bottom: 50px;
+  }
+  &__top{
+    display: flex;
+    padding: 20px 0px;
+    background-color: #F6F8FC;
+    font-size: 14px;
+    line-height: 170%;
+    text-transform: uppercase;
+    color: $title;
+  }
+  &__top-product{
+    max-width: 660px;
+    width: 100%;
+    padding-left: 120px;
+  }
+  &__top-price{
+    max-width: 117px;
+    width: 100%;
+  }
+  &__top-quantity{
+    max-width: 204px;
+    width: 100%;
+  }
+  &__top-total{
+    max-width: 128px;
+    width: 100%;
+  }
+  &__item{
+    padding: 20px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $gray;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__buy{
+    max-width: 445px;
+    padding: 50px;
+    background: rgba(210, 223, 230, 0.5);
+    margin-left: auto;
+  }
+  &__buy-form{
+    position: relative;
+    margin-bottom: 15px;
+  }
+  &__buy-input{
+    width: 100%;
+    border: none;
+    display: block;
+    padding: 16px 50px 17px 25px;
+    &::placeholder{
+      color: $default;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+  &__buy-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+  }
+  &__buy-box{
+    padding-bottom: 15px;
+    margin-bottom: 9px;
+    border-bottom: 1px solid $gray;
+  }
+  &__buy-descr{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+  &__buy-sum{
+    color: $title;
+  }
+  &__buy-total{
+    font-size: 18px;
+    line-height: 130%;
+    color: $title;
+  }
+  &__buy-totalsum{
+    font-size: 20px;
+    line-height: 160%;
+    @extend %lato-700;
+    color: $title;
+  }
+  &__buy-link{
+    margin-top: 40px;
+    @extend %btn;
+    width: 100%;
+    text-align: center;
+  }
+}
 
+.cart-item{
+  position: relative;
+  display: flex;
+  align-items: center;
+  &--delete{
+    display: none;
+  }
+  &__product{
+    max-width: 660px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__product-img{
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  &__product-name{
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 130%;
+    color: $title; 
+    text-transform: capitalize;
+  }
+  &__product-descr{
+    font-size: 14px;
+    line-height: 140%;
+    max-width: 350px;
+  }
+  &__price{
+    max-width: 117px;
+    width: 100%;
+  }
+  &__sum{
+    color: $title;
+    .bests-sellers__item-sum--sale{
+      display: block;
+      font-size: 14px;
+      line-height: 140%;
+    }
+  }
+  &__quantity{
+    max-width: 204px;
+    width: 100%;
+    padding-left: 40px;
+    position: relative;
+    .quantity input {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 100%;
+    }
+    
+    .quantity input:focus {
+      outline: 0;
+    }
+    
+    .quantity-nav {
+      float: left;
+      position: relative;
+    }
+    
+    .quantity-button {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+      line-height: 100%;
+    }
+    
+    .quantity-button.quantity-up {
+      left: 40px;
+    }
+    
+    .quantity-button.quantity-down {
+      left: -40px;
+    }
+  }
+  &__total{
+    max-width: 128px;
+    width: 100%;
+  }
+  &__total-sum{
+    font-size: 18px;
+    line-height: 160%;
+    color: $title;
+    @extend %lato-700;
+  }
+  &__deleted{
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: $default;
+    border-radius: 50%;
+    border: 1px solid $gray;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+}
 
 
 

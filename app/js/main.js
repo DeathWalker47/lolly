@@ -26,6 +26,11 @@ $(function () {
     $(this).toggleClass('checkout__item-title--active').next().slideToggle(300);
   });
 
+  $('.order__top').on('click', function(){
+    $(this).toggleClass('order__top--active').next().slideToggle(300);
+  });
+
+  
 
   $(".filter__price-input").ionRangeSlider({
     onStart: function (data) {
@@ -45,7 +50,15 @@ $(function () {
 
     $('.product-tabs__content-item').removeClass('product-tabs__content-item--active');
     $($(this).attr('href')).addClass('product-tabs__content-item--active');
+  });
 
+  $('.profile-tabs__link').on('click', function(e){
+    e.preventDefault();
+    $('.profile-tabs__link').removeClass('profile-tabs__link--active');
+    $(this).addClass('profile-tabs__link--active');
+
+    $('.profile-tabs__item').removeClass('profile-tabs__item--active');
+    $($(this).attr('href')).addClass('profile-tabs__item--active');
   });
 
 

@@ -109,3 +109,13 @@ body{
     }
   }
 }
+
+@media  (max-width:576px){
+  .subtitle{
+    font-size: 30px;
+  }
+  .title{
+    font-size: 44px;
+    line-height: 50px;
+  }
+}

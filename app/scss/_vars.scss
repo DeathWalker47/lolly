@@ -59,6 +59,13 @@ $gray:rgba($color: #D2DFE6, $alpha: .5);
   overflow: hidden;
 }
 
+@media  (max-width:576px){
+  %btn{
+    padding: 14px 20px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
 
 
 @function max($numbers...) {

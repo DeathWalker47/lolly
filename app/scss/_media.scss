@@ -7,6 +7,48 @@
       line-height: 300px;
     }
   }
+  .banner{
+    &__top{
+      align-items: flex-end;
+      height: 500px;
+    }
+    &__top-content{
+      padding: 50px 0 100px;
+      max-width: 500px;
+      margin-left: auto;
+      z-index: 1;
+      &::after {
+        bottom: -45px;
+        font-size: 130px;
+        z-index: -1;
+      }
+    }
+    &__top-img {
+      width: 600px;
+      height: 600px;
+      margin: 0;
+      margin-right: 25px;
+    }
+  }
+  .banner__top-content {
+    .banner__sale-text {
+      font-size: 180px;
+      line-height: 100%;
+    }
+    .banner__sup {
+      font-size: 75px;
+      line-height: 90%;
+    } 
+    .banner__off {
+      font-size: 35px;
+      line-height: 80%;
+      text-transform: uppercase;
+    }
+    .banner__text {
+      font-size: 35px;
+      margin-bottom: 40px;
+    }
+  }
 }
 
 @media (max-width:1366px){
@@ -39,6 +81,18 @@
   }
 }
 
+@media (max-width:1200px) {
+  .banner{
+    &__bottom{
+      flex-direction: column;
+    }
+    &__bottom-item {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+}
+
 @media (max-width:992px){
   .top {
     .top-title__title{
@@ -64,7 +118,65 @@
       right: 80px;
     }
   }
+  .bests-sellers {
+    padding: 100px 0 70px;
+    &__item:last-child {
+      margin-right: 30px;
+    }
+  }
+  .banner__top-img{
+    width: 400px;
+    height: 400px;
+    margin-right: 0;
+  }
+  .banner{
+    &__top {
+      height: 350px;
+      &::before{
+        display: none;
+      }
+    }
+    &__top-content{
+      padding: 30px 0;
+      .banner__sale-text{
+        font-size: 120px;
+      }
+      .banner__sup {
+        font-size: 50px;
+        line-height: 100%;
+      }
+      .banner__off{
+        font-size: 25px;
+      }
+      .banner__text {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    &__bottom-content{
+      .banner__sale-text {
+        font-size: 100px;
+        line-height: 120%;
+      }
+      .banner__off {
+        font-size: 25px;
+        line-height: 100%;
+      }
+      .banner__sup {
+        font-size: 35px;
+        line-height: 100%;
+      }
+    }
+    .banner__sup-box{
+      margin: 0 5px 20px;
+    }
+    &__text {
+      font-size: 27px;
+      line-height: 100%;
+    }
+  }
 }
+
 @media (max-width: 900px) and (orientation: landscape){
   .top-slider {
     .swiper-pagination{
@@ -74,6 +186,9 @@
   }
   .top .top-title__title{
     font-size: 135px;
+  }
+  .bests-sellers__item {
+    margin-right: 30px;
   }
 }
 
@@ -140,12 +255,31 @@
   }
   .top-slider .swiper-button-next, .top-slider .swiper-button-prev{
     top: 95%;
-    /* img{
-      width: 20px;
+  }
+  .bests-sellers{
+    &__title {
+      margin-bottom: 25px;
     }
-    span{
-      padding: 0 5px;
-    } */
+  }
+  .banner{
+    &__top {
+      height: auto;
+    }
+    &__top-img{
+      display: none;
+    }
+    &__top-content{
+      padding: 0 15px 20px;
+      &::after{
+        right: 0;
+        bottom: -40px;
+        font-size: 110px;
+      }
+    }
+  }
+  .banner__bottom-item{
+    padding: 50px 15px;
+    height: auto;
   }
 }
 
@@ -171,4 +305,72 @@
     left: 10px;
     right: 10px;
   }
+  .bests-sellers{
+    padding: 60px 0 20px;
+    &__item{
+      margin: 0 10px 30px;
+      &:last-child {
+        margin-right: 0px;
+        .bests-sellers__item-sum{
+          margin-top: -20px;
+        }
+      }
+    }
+  }
+  .banner__top-content {
+    .banner__text {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    .banner__sale-text {
+      font-size: 100px;
+    }
+    .banner__sup {
+      font-size: 35px;
+    }
+    .banner__off {
+      font-size: 18px;
+      line-height: 100%;
+    }
+  }
+  .banner{
+    &__sale-box {
+      margin-bottom: 10px;
+    }
+    &__bottom-content{
+      max-width: 190px;
+      .banner__sale-text {
+        font-size: 80px;
+        line-height: 100%;
+      }
+      .banner__off {
+        font-size: 20px;
+        line-height: 100%;
+      }
+      .banner__sup {
+        font-size: 26px;
+        line-height: 100%;
+      }
+      .banner__sale-text{
+        font-size: 50px;
+       span {
+        font-size: 50px;
+        line-height: 100%;
+      }
+      }
+    }
+    .banner__sup-box {
+      margin: 0 5px 6px;
+    }
+    &__text {
+      font-size: 20px;
+      line-height: 100%;
+    }
+    &__from {
+      font-size: 20px;
+      margin-bottom: 5px;
+      line-height: 100%;
+    }
+  }
+  
 }

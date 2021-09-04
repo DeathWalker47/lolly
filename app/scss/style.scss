@@ -315,7 +315,7 @@
     line-height: 160%;
     color: $title;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     &--sale{
       text-decoration: line-through;
       color: $default;
@@ -331,6 +331,7 @@
     overflow: hidden;
     &:hover{
       background-color: transparent;
+      color: $hit;
     }
   }
 }
@@ -1329,6 +1330,9 @@
     padding-bottom: 15px;
     margin-bottom: 30px;
     border-bottom: 1px solid $gray;
+    &:last-child{
+      border-bottom: none;
+    }
   }
 }
 
@@ -1445,6 +1449,9 @@
       transition: all .2s linear;
       border: 1px solid transparent;
     }
+    .bests-sellers__item-sum{
+      justify-content: space-between;
+    }
     .bests-sellers__item{
       margin-bottom: 80px;
       &:hover{
@@ -1512,6 +1519,10 @@
     font-size: 30px;
     line-height: 170%;
     color: $title;
+    display: none;
+    &--active{
+      display: block;
+    }
   }
   .bests-sellers__item-sum--sale{
     font-size: 16px;
@@ -1525,11 +1536,16 @@
   &__variant{
     margin-bottom: 50px;
   }
+  &__variant-box{
+    display: flex;
+  }
   &__variant-title{
     margin-bottom: 15px;
     font-size: 22px;
     line-height: 130%;
     text-align: left;
+    color: $title;
+    @extend %play-400;
   }
   &__variant-link{
     display: inline-block;
@@ -1572,7 +1588,9 @@
   }
   &__small-item{
     max-width: 93px;
+    height: 93px;
     margin-right: 15px;
+    cursor: pointer;
     &:last-child{
       margin-right: 0;
     }
@@ -1585,10 +1603,11 @@
 }
 
 .swiper-slide.product-slider__small-item.swiper-slide-visible.swiper-slide-thumb-active{
+  border: 2px solid $hit;
+  box-sizing: border-box;
   .product-slider__small-img{
-    border: 2px solid $hit;
-    width: 89px;
     height: 89px;
+    width: 89px;
   }
 }
 

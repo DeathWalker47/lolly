@@ -3,7 +3,6 @@ $(function () {
 
   $('.cart-item__deleted').on('click', function(e){
     e.preventDefault();
-
     $($(this).attr('href')).addClass('cart-item--delete');
   });
  
@@ -59,6 +58,15 @@ $(function () {
 
     $('.profile-tabs__item').removeClass('profile-tabs__item--active');
     $($(this).attr('href')).addClass('profile-tabs__item--active');
+  });
+
+  $('.product__variant-link').on('click', function(e){
+    e.preventDefault();
+    $('.product__variant-link').removeClass('product__variant-link--active');
+    $(this).addClass('product__variant-link--active');
+
+    $('.product__sum').removeClass('product__sum--active');
+    $($(this).attr('href')).addClass('product__sum--active');
   });
 
 
@@ -163,14 +171,8 @@ $(function () {
     crossFade: true
   },
   slidesPerView: 1,
+  simulateTouch: false,
   thumbs: {/* Связал два слайдера */
     swiper: smallSwiper 
   }
  });
-
-
-
- smallSwiper.params.control = this.bigSwiper;
- bigSwiper.params.control = this.smallSwiper;
-
-

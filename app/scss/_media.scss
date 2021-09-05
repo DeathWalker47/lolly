@@ -311,6 +311,34 @@
   .post{
     padding: 100px 0;
   }
+  .cart__top{
+    margin-bottom: 20px;
+  }
+  .cart-item{
+    padding: 0 0 20px;
+    &__product{
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__product-img{
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+    &__product-descr {
+      padding-right: 15px;
+    }
+  }
+  .cart{
+    padding: 100px 0;
+  }
+  .checkout{
+    padding: 100px 0;
+    &__inner{
+      flex-direction: column;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
 }
 
 @media (max-width: 900px) and (orientation: landscape){
@@ -524,6 +552,15 @@
       margin: 0 0 15px;
       padding: 15px;
     }
+  }
+  .cart {
+    background-image: none;
+  }
+  .cart__top-product {
+    padding-left: 10px;
+  }
+  .cart__buy {
+    margin: 0 auto;
   }
 }
 /* ==== 768===== */
@@ -859,6 +896,97 @@
     }
     &__textarea{
       padding: 15px;
+    }
+  }
+  .cart{
+    padding: 60px 0;
+    &__top{
+      display: none;
+    }
+  }
+  .cart-item{
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    &__product{
+      align-items: center;
+    }
+    &__product-name {
+      margin-bottom: 0;
+    }
+    &__product-descr {
+      width: 250px;
+    }
+    &__product-box,
+    &__price,
+    &__quantity,
+    &__total{
+      margin: 0 auto 10px;
+      text-align: center;
+    }
+    &__product-img {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  .cart-item__quantity{
+    padding-left: 0;
+    .quantity-button.quantity-down {
+      left: 43px;
+    }
+    .quantity-button.quantity-up {
+      left: 121px;
+    }
+  }
+  .cart-item__deleted{
+    top: 0;
+    transform: translateY(0%);
+  }
+  .cart{
+    &__content {
+      margin-bottom: 30px;
+    }
+    &__buy{
+      padding: 20px;
+    }
+    &__buy-input {
+      padding: 11px 45px 11px 15px;
+    }
+    &__buy-link {
+      margin-top: 15px;
+    }
+  }
+  .head .head__content--cart::after {
+    content: 'Cart';
+    left: 31%;
+  }
+  .checkout{
+    background-image: none;
+    padding: 60px 0;
+    &__item-title {
+      padding: 18px 10px 18px 65px;
+      &::before{
+        left: 10px;
+      }
+    }
+    &__order-title {
+      font-size: 26px;
+      line-height: 100%;
+    }
+    &__item-form {
+      padding: 0 20px;
+    }
+    &__item-input{
+      padding: 15px;
+    }
+    &__order-items {
+      margin-bottom: 30px;
+    }
+  }
+  .checkout-coupon {
+    padding: 25px;
+    &__title {
+      margin-bottom: 20px;
     }
   }
 }

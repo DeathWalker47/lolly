@@ -113,6 +113,24 @@
 }
 
 @media (max-width:1200px) {
+  .head{
+    &::before {
+      bottom: -50px;
+      left: -110px;
+    }
+    &::after {
+      bottom: auto;
+      right: -70px;
+      top: -22px;
+    }
+    &__content{
+      &::after {
+        font-size: 180px;
+        line-height: 149%;
+        bottom: -28%;
+      }
+    }
+  }
   .banner{
     &__bottom{
       flex-direction: column;
@@ -149,6 +167,26 @@
   .newsletter__item{
     &:nth-child(6){
       grid-row: 1;
+    }
+  }
+  .about{
+    &__item{
+      flex-direction: column;
+      max-width: 555px;
+      margin: 0 auto;
+      &:nth-child(2){
+        picture{
+          order: 1;
+        }
+      }
+    }
+  }
+
+  .blog-page{
+    .blog__item{
+      &:nth-child(3n) {
+        margin-right: 30px;
+      }
     }
   }
 }
@@ -263,6 +301,15 @@
     &:nth-child(6){
       grid-row: none;
     }
+  }
+  .about{
+    padding-top: 60px;
+  }
+  .blog-page{
+    padding: 100px 0;
+  }
+  .post{
+    padding: 100px 0;
   }
 }
 
@@ -447,10 +494,45 @@
     right: 60px;
     font-size: 180px;
   }
+  .head{
+    &::before {
+      display: none;
+    }
+    
+    &__content{
+      padding: 100px 0 60px;
+      &::after {
+        font-size: 100px;
+        line-height: 100%;
+        bottom: -9%;
+        left: 29%;
+        /* transform: translateX(-50%); */
+      }
+    }
+  }
+  .post {
+    background-image: none;
+  }
+  .post-content{
+    &__img-box {
+      margin-bottom: 20px;
+    }
+  }
+  .leave-comment{
+    &__input {
+      width: 100%;
+      margin: 0 0 15px;
+      padding: 15px;
+    }
+  }
 }
 /* ==== 768===== */
 
 @media  (max-width:576px){
+  .head__title {
+    font-size: 40px;
+    line-height: 100%;
+  }
   .header {
     padding: 20px;
   }
@@ -623,6 +705,162 @@
     right: 30px;
     font-size: 100px;
   }
+  .about{
+    padding-top: 30px;
+    &__title {
+      font-size: 30px;
+      line-height: 100%;
+    }
+    &__content{
+      padding: 30px 0;
+    }
+    &__img{
+      width: 400px;
+      height: 400px;
+      margin: 0 auto;
+    }
+    &__item-img {
+      max-width: 40%;
+    }
+  }
+
+  .head{
+    &::after {
+      bottom: -120px;
+      right: auto;
+      top: auto;
+      left: -68px;
+      transform: rotate(-180deg);
+      width: 257px;
+      height: 220px;
+    }
+    &__content {
+      padding: 80px 0 40px;
+      &::after {
+        font-size: 70px;
+        line-height: 100%;
+        bottom: -16%;
+        left: 20%;
+      }
+      &::before {
+        top: 40%;
+        right: -10%;
+      }
+    }
+    &__title {
+      font-size: 35px;
+    }
+  }
+  .blog{
+    background-image: none;
+  }
+   .blog-page{
+     padding: 60px 0;
+    .blog__item{
+      margin-bottom: 35px;
+      margin-right: 0px;
+      &:nth-child(3n) {
+        margin-right: 0px;
+      }
+    }
+  }
+  .blog__img{
+    height: 350px;
+  }
+  .post{
+    padding: 60px 0;
+    .blog__img-date{
+      padding: 10px;
+    }
+    .blog__img-num {
+      font-size: 22px;
+      line-height: 100%;
+    }
+    .blog__img-month {
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+  .post-content{
+    margin-bottom: 30px;
+    &__info {
+      justify-content: space-between;
+    }
+    &__info-numcomments {
+      margin-left: 0;
+    }
+    &__top-img {
+      width: 100%;
+      height: auto;
+    }
+    article {
+      margin-bottom: 25px;
+    }
+    ul, ol{
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-size: 30px;
+      line-height: 100%;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    blockquote {
+      margin-top: 20px;
+      padding: 20px;
+      &::before {
+        bottom: -30px;
+        left: -15px;
+      }
+      &::after{
+        display: none;
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+    }
+    &__item-box{
+      display: none;
+    }
+    &__tags-links{
+      margin-top: 25px;
+      flex-direction: column;
+    }
+    &__links{
+      margin-bottom: 10px;
+    }
+  }
+  .comments{
+    margin-bottom: 40px;
+    &__title {
+      font-size: 30px;
+      line-height: 100%;
+      margin-bottom: 25px;
+    }
+  }
+  .comment {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    &--reply {
+      padding-left: 30px;
+    }
+  }
+  .leave-comment{
+    padding: 20px;
+    &::before {
+      display: none;
+    }
+    &__title {
+      font-size: 30px;
+      line-height: 100%;
+      margin-bottom: 25px;
+    }
+    &__textarea{
+      padding: 15px;
+    }
+  }
 }
 /* ==== 567 ===== */
 
@@ -633,5 +871,8 @@
     .bests-sellers__item {
       margin: 0 18px;
     }
+  }
+  .head__content::before {
+    right: -17%;
   }
 }

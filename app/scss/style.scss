@@ -802,7 +802,8 @@
     margin-bottom: 50px;
   }
   &__form-input{
-    border: none;
+    border: 1px solid $gray;
+    border-radius: none;
     max-width: 350px;
     width: 100%;
     margin-right: 12px;
@@ -905,9 +906,9 @@
 }
 
 .head{
-  background: url('../images/head-top.jpg') no-repeat 100%/cover; 
+  background: url('../images/head-top.jpg') no-repeat center/cover; 
   @supports (background-image: url('../images/head-top.webp')){
-    background: url('../images/head-top.webp') no-repeat 100%/cover;
+    background: url('../images/head-top.webp') no-repeat center/cover;
   }
   overflow: hidden;
   position: relative;

@@ -190,8 +190,8 @@
     flex-wrap: wrap;
   }
   &__item{
-    width: 255px;
-    margin-right: 30px;
+    max-width: 255px;
+   /*  margin-right: 30px; */
     margin-bottom: 30px;
     background-color: $white;
     position: relative;
@@ -633,7 +633,7 @@
 }
 
 .blog{
-  padding-bottom: 160px;
+  padding-bottom: 130px;
   background-image: url('../images/decor/decor-blog-min.svg');
   background-repeat: no-repeat;
   background-position: 100% 265%;
@@ -647,10 +647,12 @@
   &__inner{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
   &__item{
     width: 350px;
     margin-right: 30px;
+    margin-bottom: 30px;
     &:last-child{
       margin-right: 0;
     }

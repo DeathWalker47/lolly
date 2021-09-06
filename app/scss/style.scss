@@ -191,7 +191,7 @@
   }
   &__item{
     max-width: 255px;
-   /*  margin-right: 30px; */
+    margin-right: 30px;
     margin-bottom: 30px;
     background-color: $white;
     position: relative;
@@ -528,6 +528,9 @@
 
 .bests-swiper{
   position: relative;
+  .bests-sellers__item{
+    margin-right: 0;
+  }
 }
 
 .reviews{
@@ -2198,6 +2201,7 @@ input[type=number]
   background-size: auto;
 }
 .profile-tabs{
+  background-color: $white;
   &__item{
     display: none;
     &--active{
@@ -2347,6 +2351,7 @@ input[type=number]
   }
   &__item{
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding-bottom: 20px;
     margin-bottom: 20px;

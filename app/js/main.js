@@ -1,6 +1,10 @@
 
 $(function () {
 
+  $('.shop__filter-btn').on('click', function(){
+    $('.shop__filter').slideToggle(300);
+  });
+
   $('.cart-item__deleted').on('click', function(e){
     e.preventDefault();
     $($(this).attr('href')).addClass('cart-item--delete');

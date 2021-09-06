@@ -1326,6 +1326,20 @@
   background: url('../images/shop-bg.svg') no-repeat 0% 100%/auto;
   &__inner{
     display: flex;
+    /* position: relative; */
+  }
+  &__filter-btn{
+    display: none;
+    border: 1px solid $gray;
+    border-radius: 3px;
+    background-color: #D2DFE6;
+    padding: 0;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    z-index: 56;
   }
   &__filter{
     width: 255px;

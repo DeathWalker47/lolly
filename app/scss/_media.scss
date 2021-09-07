@@ -64,7 +64,6 @@
     &__img{
       width: 600px;
       height: 600px;
-      margin: 0;
     }
     .swiper-pagination {
       bottom: 15%;
@@ -421,13 +420,6 @@
   .bests-sellers__item {
     margin-right: 30px;
   }
-  .shop-content__inner{
-    /* .bests-sellers__item{
-      &:nth-child(2n) {
-        margin-right: 30px;
-      }
-    } */
-  }
 }
 
 
@@ -436,7 +428,18 @@
     font-size: 100px;
     line-height: 100%;
   }
+  .header__logo{
+    margin-right: 0;
+  }
   .menu{
+    order: -1;
+    margin-right: 20px;
+    &__btn{
+      display: block;
+    }
+    ul.menu__list{
+      padding: 80px 0;
+    }
     &__list{
       list-style: none;
       position: absolute;
@@ -444,23 +447,28 @@
       right: 0;
       top: 0;
       bottom: 0;
+      width: 70%;
       height: 100vh;
       padding-top: 20px;
-      align-items: center;
       justify-content: space-around;
       flex-direction: column;
+      text-align: center;
       background-color: rgba($color: #CDE0F1, $alpha: .8);
-      transform: translateY(-300%);
+      transform: translateX(-100%);
       transition: all .3s linear;
       &--active{
-      transform: translateY(0%);
+      transition: all .3s linear;
+      transform: translateX(0%);
       }
     }
     &__item {
       margin-right: 0;
+      width: 100%;
     }
     &__link{
       font-size: 16px;
+      display: block;
+      padding: 10px;
     }
   }
   .user-panel__link-img{
@@ -719,10 +727,10 @@
   }
   .top-slider{
     .swiper-button-prev {
-      left: 50px;
+      left: 35px;
     }
     .swiper-button-next {
-      right: 50px;
+      right: 35px;
     }
   }
   .top-slider .swiper-pagination {
@@ -750,14 +758,15 @@
       margin-bottom: 20px;
     }
     .banner__sale-text {
-      font-size: 100px;
+      font-size: 110px;
     }
     .banner__sup {
-      font-size: 35px;
+      font-size: 55px;
     }
     .banner__off {
-      font-size: 18px;
+      font-size: 40px;
       line-height: 100%;
+      padding-left: 10px;
     }
   }
   .banner{
@@ -773,6 +782,7 @@
       .banner__off {
         font-size: 20px;
         line-height: 100%;
+        padding-left: 10px;
       }
       .banner__sup {
         font-size: 26px;
@@ -787,7 +797,8 @@
       }
     }
     .banner__sup-box {
-      margin: 0 5px 6px;
+      margin: 0 0 10px;
+      display: block;
     }
     &__text {
       font-size: 20px;

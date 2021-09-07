@@ -1,6 +1,10 @@
 
 $(function () {
 
+  $('.menu__btn').on('click', function(){
+    $('.menu__list').toggleClass('menu__list--active');
+  });
+
   $('.shop__filter-btn').on('click', function(){
     $('.shop__filter').slideToggle(300);
   });

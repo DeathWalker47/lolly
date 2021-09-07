@@ -26,6 +26,38 @@
 }
 
 .menu{
+  &__btn{
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: none;
+  }
+  &__btn-line{
+    display: block;
+    z-index: 1;
+    position: relative;
+    width: 30px;
+    height: 2px;
+    background-color: $title;
+    &::before,
+    &::after{
+      content: '';
+      position: absolute;
+      background-color: $title;
+      left: 0;
+      width: 30px;
+      height: 2px;
+    }
+    &::before{
+      top: 5px;
+    }
+    &::after{
+      bottom: 5px;
+    }
+  }
   &__list{
     display: flex;
   }
@@ -70,6 +102,7 @@
 }
 
 .top{
+  background-color: #d1e3f4;
   background-image: url('../images/top-bg.jpg');
   background-position: center;
   background-size: cover;
@@ -121,6 +154,7 @@
   .swiper-button-prev {
     position: absolute;
     top: 90%;
+    width: 85px;
     z-index: 10;
     cursor: pointer;
     display: flex;
@@ -130,6 +164,7 @@
     font-size: 14px;
     line-height: 170%;
     text-transform: uppercase;
+    outline: none;
     @extend %lato-700;
     img{
       width: 40px;
@@ -266,6 +301,7 @@
     }
   }
   &__item-box{
+    background-color: $white;
     width: 255px;
     overflow: hidden;
     display: block;
@@ -341,6 +377,7 @@
 
 .banner{
   &__top{
+    background-color: #d1e3f4;
     background-image: url('../images/two-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -443,6 +480,7 @@
         margin-right: 0;
       }
       &--discount{
+        background-color: #f1d0bb;
         background: url('../images/photo-1.jpg') no-repeat 100%/cover;
         @supports (background-image: url('../images/photo-1.webp')){
           background: url('../images/photo-1.webp') no-repeat 100%/cover;
@@ -453,6 +491,7 @@
         }
       }
       &--sale{
+        background-color: $white;
         background: url('../images/photo-2.jpg') no-repeat 100%/cover;
         @supports (background-image: url('../images/photo-2.webp')){
           background: url('../images/photo-2.webp') no-repeat 100%/cover;
@@ -463,6 +502,7 @@
         }
       }
       &--popular{
+        background-color: #bbd9df;
         background: url('../images/photo-3.jpg') no-repeat 100%/cover;
         @supports (background-image: url('../images/photo-3.webp')){
           background: url('../images/photo-3.webp') no-repeat 100%/cover;
@@ -534,6 +574,7 @@
 }
 
 .reviews{
+  background-color: #d1e3f4;
   background: url('../images/three-bg.jpg') no-repeat 100%/center;
   @supports (background-image: url('../images/three-bg.webp')){
     background: url('../images/three-bg.webp') no-repeat 100%/cover;
@@ -606,7 +647,7 @@
   &__img{
     width: 835px;
     height: 930px;
-    margin-top: -189px;
+    margin-top: -169px;
     object-fit: contain;
   }
 
@@ -661,6 +702,7 @@
     }
   }
   &__img-link{
+    background-color: #c1dfe0;
     display: block;
     margin-bottom: 25px;
     position: relative;
@@ -761,6 +803,7 @@
     grid-template-rows: repeat(2, 1fr);
   }
   &__item{
+    background-color: #f0dbdd;
     &--newsletter{
       grid-column: span 2;
       background-color: $hit;
@@ -909,6 +952,7 @@
 }
 
 .head{
+  background-color: #d1e3f4;
   background: url('../images/head-top.jpg') no-repeat center/cover; 
   @supports (background-image: url('../images/head-top.webp')){
     background: url('../images/head-top.webp') no-repeat center/cover;

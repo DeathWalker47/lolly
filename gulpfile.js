@@ -35,6 +35,7 @@ function scripts() {
     'node_modules/jquery/dist/jquery.js',
     'node_modules/rateyo/src/jquery.rateyo.js',
     'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+    'node_modules/ellipsis.js/ellipsis.js',
     'app/js/main.js'
   ])
   .pipe(concat('main.min.js'))

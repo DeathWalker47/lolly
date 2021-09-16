@@ -195,3 +195,14 @@ $(function () {
     swiper: smallSwiper 
   }
  });
+
+
+ Ellipsis({
+  ellipsis: '…',
+  debounce: 150,
+  responsive: true,
+  className: '.blog__text',
+  lines: 3 ,
+  portrait: null ,
+  break_word: false,
+ });

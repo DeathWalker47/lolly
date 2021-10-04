@@ -7,8 +7,10 @@ $(function () {
   });
 
   $('.shop__filter-btn').on('click', function(){
+    $('body').toggleClass('body--active');
     $('.shop__filter').slideToggle(300);
   });
+ 
 
   $('.cart-item__deleted').on('click', function(e){
     e.preventDefault();
